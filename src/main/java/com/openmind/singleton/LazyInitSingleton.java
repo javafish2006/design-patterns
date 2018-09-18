@@ -15,6 +15,13 @@ public class LazyInitSingleton {
         if (INSTANCE == null) {
             synchronized (LazyInitSingleton.class) {
                 if (INSTANCE == null) {
+                    //test start 测试时延长等待时间，对比线程安全效果
+                    try {
+                        Thread.sleep(300);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    //test end
                     INSTANCE = new LazyInitSingleton();
                 }
             }
