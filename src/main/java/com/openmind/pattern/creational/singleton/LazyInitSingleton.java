@@ -1,4 +1,4 @@
-package com.openmind.singleton;
+package com.openmind.pattern.creational.singleton;
 
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
